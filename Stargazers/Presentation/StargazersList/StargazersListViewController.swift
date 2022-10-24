@@ -37,6 +37,7 @@ class StargazersListViewController: BaseViewController {
     @IBOutlet private weak var emptyPlaceholderStackView: UIStackView!
     @IBOutlet private weak var emptyPlaceholderImageView: UIImageView!
     @IBOutlet private weak var emptyPlaceholderLabel: UILabel!
+    @IBOutlet private weak var pullInfoView: UIView!
     private lazy var refreshControl = UIRefreshControl()
     
     // MARK: - Lifecyle
@@ -93,6 +94,7 @@ private extension StargazersListViewController {
     func updateServersList(animated: Bool = true) {
         refreshControl.endRefreshing()
         emptyPlaceholderStackView.isHidden = !viewModel.stargazers.value.isEmpty
+        pullInfoView.isHidden = !emptyPlaceholderStackView.isHidden
         
         if viewModel.isValidRepo {
             emptyPlaceholderImageView.image = UIImage(systemName: "star.slash")

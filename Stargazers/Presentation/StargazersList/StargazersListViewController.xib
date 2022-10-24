@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,6 +17,7 @@
                 <outlet property="emptyPlaceholderLabel" destination="PgG-2a-X8G" id="Pmb-Fp-7RO"/>
                 <outlet property="emptyPlaceholderStackView" destination="VAw-rP-RyZ" id="ilc-yb-Ioj"/>
                 <outlet property="fetchStargazersButton" destination="op5-xJ-QVQ" id="Rqj-Ff-LhE"/>
+                <outlet property="pullInfoView" destination="wXn-8L-sza" id="n2X-ef-wlL"/>
                 <outlet property="repoNameTextField" destination="j6Q-gm-Slm" id="CFv-LG-2JJ"/>
                 <outlet property="repoOwnerTextField" destination="AcG-vg-r3R" id="r1e-qf-ceE"/>
                 <outlet property="tableView" destination="xiJ-9b-Xsr" id="NjI-JA-1oi"/>
@@ -79,8 +81,25 @@
                                 <constraint firstAttribute="bottom" secondItem="0lf-u2-uJC" secondAttribute="bottom" id="naU-pz-VoV"/>
                             </constraints>
                         </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wXn-8L-sza">
+                            <rect key="frame" x="0.0" y="126" width="414" height="20.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pull down to fetch more stargazers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1a-p8-9D8">
+                                    <rect key="frame" x="20" y="0.0" width="374" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" name="GrayDark"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="L1a-p8-9D8" firstAttribute="leading" secondItem="wXn-8L-sza" secondAttribute="leading" constant="20" id="HTI-dE-pTR"/>
+                                <constraint firstItem="L1a-p8-9D8" firstAttribute="top" secondItem="wXn-8L-sza" secondAttribute="top" id="Mff-Jv-v8c"/>
+                                <constraint firstAttribute="trailing" secondItem="L1a-p8-9D8" secondAttribute="trailing" constant="20" id="XAk-zh-GpD"/>
+                                <constraint firstAttribute="bottom" secondItem="L1a-p8-9D8" secondAttribute="bottom" id="vcC-gW-NuV"/>
+                            </constraints>
+                        </view>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xiJ-9b-Xsr">
-                            <rect key="frame" x="0.0" y="126" width="414" height="706"/>
+                            <rect key="frame" x="0.0" y="166.5" width="414" height="665.5"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </tableView>
                     </subviews>
@@ -122,6 +141,9 @@
     <resources>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="star.slash" catalog="system" width="128" height="116"/>
+        <namedColor name="GrayDark">
+            <color red="0.22699999809265137" green="0.22699999809265137" blue="0.23899999260902405" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
