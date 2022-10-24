@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "smartnet",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/vetrek/SmartNet.git",
+      "state" : {
+        "revision" : "014a31255de6ba6adf8a5c5d8815723e23407fb6",
+        "version" : "0.2.6"
+      }
+    }
+  ],
+  "version" : 2
+}

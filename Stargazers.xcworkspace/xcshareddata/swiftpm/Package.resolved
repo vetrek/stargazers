@@ -1,0 +1,32 @@
+{
+  "pins" : [
+    {
+      "identity" : "nuke",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kean/Nuke",
+      "state" : {
+        "revision" : "0d8a0dc3cca7432a6772ec546a7e5e1b20103bda",
+        "version" : "11.3.0"
+      }
+    },
+    {
+      "identity" : "smartnet",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/vetrek/SmartNet.git",
+      "state" : {
+        "revision" : "014a31255de6ba6adf8a5c5d8815723e23407fb6",
+        "version" : "0.2.6"
+      }
+    },
+    {
+      "identity" : "swift-collections",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-collections.git",
+      "state" : {
+        "revision" : "f504716c27d2e5d4144fa4794b12129301d17729",
+        "version" : "1.0.3"
+      }
+    }
+  ],
+  "version" : 2
+}
